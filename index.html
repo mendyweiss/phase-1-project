@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gap Opening</title>
-        <meta name="gap opening" content="Gap Opening Tester">
-        <link rel="stylesheets" href="sorces/styles.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         code here mr mendy:
+        <div id="head-ribbon">
+            <h1 id="title">Gap Opening</h1>
+            <div id="form-div">
+               <p class="para" id="discription">Input some discription on gap opening here</p>
+               <form id="stock-selector">
+                    <label>Choose from the following stocks to test gap opening:</label>
+                    <select id="choices">
+                        <option id="snp">S&P 500</option>
+                        <option id="tsla">Tesla</option>
+                        <option id="djs">Dow Jones</option>
+                    </select>
+                    <input type="submit">
+               </form>
+            </div>
+        </div>
         <script src="sorces/index.js"></script>
     </body>
 </html>
