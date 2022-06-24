@@ -1,8 +1,30 @@
+body {
+    background-color: #67f3b1;
+}
+
 #head-ribbon {
+    margin: 20px;
+    padding: 10px;
     text-align: center;
     height: 200px;
-    width: 100%;
+    width: 96%;
     border: 2px;
     border-color: black;
+    border-style: solid;
     border-radius: 5px;
+}
+
+#history {
+    border: 2px;
+    border-radius: 5px;
+    border-style: solid;
+    position: static;
+    float: right;
+    left: 80%;
+    right: 10%;
+    margin: 14px;
+}
+
+ul li {
+    list-style-type: none;
 }
