@@ -25,6 +25,16 @@ body {
     margin: 14px;
 }
 
+ul {
+    text-align: center;
+    padding-inline-start: 0px;
+}
+
 ul li {
     list-style-type: none;
+    padding: 10px;
+}
+
+li:hover {
+    color: aliceblue;
 }
