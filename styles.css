@@ -14,19 +14,36 @@ body {
     border-radius: 5px;
 }
 
+.data-container {
+    width: 98%;
+    border: 2px;
+    border-radius: 5px;
+    border-style: solid;
+    margin: 14px;
+    height: 400px;
+    position: relative;
+}
+
+#chart {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 #history {
+    
+    height: 400px;
+    width: 20%;
     border: 2px;
     border-radius: 5px;
     border-style: solid;
     position: static;
-    float: right;
-    left: 80%;
-    right: 10%;
     margin: 14px;
+    text-align: center;
+
 }
 
 ul {
-    text-align: center;
     padding-inline-start: 0px;
 }
 
@@ -37,4 +54,10 @@ ul li {
 
 li:hover {
     color: aliceblue;
+}
+
+#eraser {
+    position: static;
+    bottom: 0%;
+    margin: 14px;
 }
