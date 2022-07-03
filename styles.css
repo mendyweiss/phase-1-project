@@ -14,6 +14,18 @@ body {
     border-radius: 5px;
 }
 
+span {
+    border: #111;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 8px;
+    float: right;
+    right: 10%;
+}
+.botton :hover {
+    color: rgba(128, 128, 128, 0.8);
+}
+
 .data-container {
     width: 98%;
     border: 2px;
@@ -31,16 +43,22 @@ body {
 }
 
 #history {
-    
-    height: 400px;
+    height: 100%; /* 100% Full-height */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     width: 20%;
-    border: 2px;
-    border-radius: 5px;
-    border-style: solid;
-    position: static;
-    margin: 14px;
-    text-align: center;
-
+}
+#closeBtn {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    font-size: large;
 }
 
 ul {
@@ -48,12 +66,17 @@ ul {
 }
 
 ul li {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;   
     list-style-type: none;
-    padding: 10px;
 }
 
 li:hover {
-    color: aliceblue;
+    color: rgb(4, 74, 134);
 }
 
 #eraser {
