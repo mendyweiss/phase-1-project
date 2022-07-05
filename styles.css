@@ -19,8 +19,13 @@ span {
     border-style: solid;
     border-radius: 5px;
     padding: 8px;
+    position: relative;
     float: right;
     right: 10%;
+}
+
+span :hover {
+    border: rgb(254, 254, 112);
 }
 .botton :hover {
     color: rgba(128, 128, 128, 0.8);
@@ -34,6 +39,7 @@ span {
     margin: 14px;
     height: 400px;
     position: relative;
+    text-align: center;
 }
 
 #chart {
@@ -43,16 +49,20 @@ span {
 }
 
 #history {
-    height: 100%; /* 100% Full-height */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
     right: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
     width: 20%;
+}
+
+.title{
+    color: azure;
 }
 #closeBtn {
     position: absolute;
@@ -83,4 +93,39 @@ li:hover {
     position: static;
     bottom: 0%;
     margin: 14px;
+}
+
+#data-text{
+    background-color: white;
+}
+
+#market-data {
+    border-left-style: solid;
+    height: 100%;
+    height: 100%;
+    width: 33%; 
+    float: left;
+    display: inline;
+}
+#trading-data {
+    border-left-style: solid;
+    height: 100%;
+    width: 34%;
+    float: left;
+    display: inline;
+    
+
+}
+#total-box {
+    border-left-style: solid;
+    height: 100%;
+    width: 33%;
+    float: right;
+    display: inline;
+}
+.total {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }

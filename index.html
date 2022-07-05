@@ -15,6 +15,10 @@
             <h1 class="title">Gap Opening</h1>
             <div id="form-div">
                <p class="para" id="discription">Input some discription on gap opening here</p>
+               <span id="manu">
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/menu--v1.png"/>
+            </span>
+
                <form id="stock-selector">
                     <label>Choose from the following stocks to test gap opening:</label>
                     <select id="choices">
@@ -32,9 +36,6 @@
                 </ul>
                 <button id="eraser">Clear History</button>
             </div>
-            <span id="manu">
-                <img src="https://img.icons8.com/ios-glyphs/30/000000/menu--v1.png"/>
-            </span>
         </div>
 
             </div>
@@ -46,7 +47,23 @@
             <div class="data-container">
                 <canvas id="chart2" style="height: 100%; width: 100%; background-color: white;"></canvas>
             </div>
-            <div id="data-text">
+            <div class="data-container" id="data-text">
+                <div id="market-data">
+                    <h2 class="data">Gap Up Days:</h2>
+                    <h4 class="data" id="gapupDays"></h4>
+                    <h2 class="data">Gap Down Days:</h2>
+                    <h4 class="data" id="gapdownDays"></h4>
+                </div>
+                <div id="trading-data">
+                    <h2 class="data">Pofitable Days:</h2>
+                    <h4 class="data" id="profitableDays"></h4>
+                    <h2 class="data">Days with Losses:</h2>
+                    <h4 class="data" id="lossesDays"></h4>
+                </div>
+                <div id="total-box">
+                    <h2 class="data">Total Gains:</h2>
+                    <h4 class="data" id="total"></h4>
+                </div>
 
             </div>
         <script type="module" src="/sources/index.js"></script>
