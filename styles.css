@@ -41,6 +41,9 @@ span :hover {
     position: relative;
     text-align: center;
 }
+.inside-div{
+    margin: auto;
+}
 
 #chart {
     position: relative;
