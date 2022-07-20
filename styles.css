@@ -6,7 +6,7 @@ body {
     margin: 20px;
     padding: 10px;
     text-align: center;
-    height: 200px;
+    height: 100px;
     width: 96%;
     border: 2px;
     border-color: black;
@@ -125,10 +125,4 @@ li:hover {
     width: 33%;
     float: right;
     display: inline;
-}
-.total {
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-items: center;
 }
