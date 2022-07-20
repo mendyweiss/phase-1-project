@@ -4,7 +4,7 @@
 
 There are many forms of trading methods out there but a common denominator between many of them is finding a gap or a suspected gap between two price points and exploiting it. For instance, there are many people who trade earnings (the four times a year a public company is mandated to produce its balance sheets), as they suspect the price will have a gap (i.e. jump) up or down. Quite a few strategies will look at the data and assess what the high and low prices are for that company's stock and if the price rises or falls below those points they will trade that gap according to their methods.
 
-##Gap Opening
+## Gap Opening
 
 Being that the market closes at 4 eastern standard time everyday, and there is often news regarding companies or the markets in general released after that, markets have evolved to have pre-trading and post-trading hours. Often prices at the end of one trading day are NOT the same as the next day’s opening price. This is called a gap, or a gap in price. When the market closes lower than the next days open it is called “Gap Up”, and inversely when the market closes higher than the next day’s open it is called “Gap Down”. Now there are many ways of looking at this gap such as assessing yesterday's highest/lowest price against today's open, Or even assessing the gap weekly instead of daily. But due to our limited resources this website will only work with assessing the gap between the markets close to markets open.
 
