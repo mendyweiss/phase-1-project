@@ -18,5 +18,5 @@ There are a few important notes. First, this website is not giving investing adv
 
 #### Sources
 
-This website has used Charts from [ChartsJS](https://www.chartjs.org/docs/latest/ "Chart JS Website"), images from [FontAwesome](https://fontawesome.com/ "FontAwesome.com"), and data from Yahoo Finance via [Rapid api]([https://fontawesome.com/](https://rapidapi.com/hub "RapidAPI.com").
+This website has used Charts from [ChartsJS](https://www.chartjs.org/docs/latest/ "Chart JS Website"), images from [FontAwesome](https://fontawesome.com/ "FontAwesome.com"), and data from Yahoo Finance via [Rapid api](https://rapidapi.com/hub "RapidAPI.com").
 
