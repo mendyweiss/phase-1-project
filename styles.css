@@ -24,7 +24,7 @@ span {
     right: 10%;
 }
 
-span :hover {
+.hover :hover {
     border: rgb(254, 254, 112);
 }
 .botton :hover {
