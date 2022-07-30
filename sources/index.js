@@ -170,6 +170,7 @@ function dataParser (response){
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('history').hidden = true
     document.getElementById('data-text').hidden = true
+    document.getElementById('how-to').hidden = true
      fetchFunc('SPY', dataParser)
 })
 
@@ -182,16 +183,35 @@ document.getElementById("submitStockType").addEventListener('click', (event) => 
     const searchForStock = document.getElementById('choices').value
 
     const historyTag = document.createElement('li')
-    historyTag.textContent = searchForStock
-    document.getElementById('list').append(historyTag)
+    // const star = document.createElement('i')
+    // star.className = "fa-duotone fa-star hover"
+    historyTag.textContent =  searchForStock
+    document.getElementById('list').append(historyTag) //star
+    document.getElementsByClassName('fa-duotone')[0].addEventListener('click', (e) => {
+        if (e.target.style.color !== "yellow"){
+            e.target.style.color = "yellow";
+        } else{
+            e.target.style.color = "gray";
+        }
+    })
     document.getElementById('data-text').hidden = false
     fetchFunc(searchForStock, dataParser)
 
 
 })
 
-// manu botton
-document.getElementById('manu').addEventListener('click', () => {
+//How to use site button
+document.getElementById('how-to-div').addEventListener('click', (e) => {
+    if (document.getElementById('how-to').hidden === true){
+        document.getElementById('how-to').hidden = false;
+    } else {
+        document.getElementById('how-to').hidden = true;
+
+    }
+})
+
+// menu botton
+document.getElementById('menu').addEventListener('click', () => {
     document.getElementById('history').hidden = false
 })
 // close button
@@ -202,3 +222,4 @@ document.getElementById('closeBtn').addEventListener('click', () => {
 document.getElementById('eraser').addEventListener('click', () => {
     document.getElementById('list').innerHTML = ''
 })
+

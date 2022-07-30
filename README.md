@@ -14,7 +14,7 @@ When it comes to trading strategies, testing the strategy before investing is un
 
 ## Notes
 
-There are a few important notes. First, this website is not giving investing advice nor are making any investment suggestions, we are merely providing a tool to help in your own research. Second, due to complications we currently don't include data for the days after dividends (only for stocks that give dividends), which can potentially be an important trading day.
+There are a few important notes. First, this website is not giving investing advice nor are making any investment suggestions, we are merely providing a tool to help in your own research. Second, due to complications we currently don't include data for the days after dividends (only for stocks that give dividends), which can potentially be an important trading day. Third, we would like to remind youn that the site has not taken into account taxes and fees which can differ by time or individual.
 
 #### Sources
 
