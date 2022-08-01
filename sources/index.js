@@ -19,19 +19,29 @@ function fetchFunc (stock, func) {
         .catch(err => console.error(err));
 }
 
- 
+function gapBarColor (data) {
+    return data.map((element) => {
+         if (element > 0) {
+             return 'rgb(127, 255, 0, 1)'
+         } else {
+             return 'rgba(255, 0, 0, 1)'
+         }
+     });
+ }
+
+ function profitsBarColor (dailyProfitsArr) {
+    return dailyProfitsArr.map (element => {
+        if (element === 'green') {
+            return 'rgb(127, 255, 0, 1)'
+        } else {
+            return 'rgba(255, 0, 0, 1)'
+        }
+    })
+ }
  // a function to build the charts
- function createCharts (labels, data, tooltips, canvasName, chartTitle){
+ function createCharts (labels, data, redGreenFunc, tooltips, canvasName, chartTitle){
         // a function to color the bars on the chart
-    function barColor (data) {
-       return data.map((element) => {
-            if (element > 0) {
-                return 'rgb(127, 255, 0, 1)'
-            } else {
-                return 'rgba(255, 0, 0, 1)'
-            }
-        });
-    }
+
     function addToolTips (data) {
         return data.map(element => element)
     }
@@ -41,7 +51,7 @@ function fetchFunc (stock, func) {
         datasets:[{
             label: chartTitle,
             data: data,  
-            backgroundColor: barColor(data)                           
+            backgroundColor: redGreenFunc                         
         }],
  
     }
@@ -77,6 +87,7 @@ function dataParser (response){
 
     let abbreviatedDays = [] // labels for charts
     let tooltipsDays = [] //tooltips for charts
+    let dailyProfitsArr = [] //to display a profitable day in the second chart
     let gap = [] // gap for calculations
     let dayShifted = [] //for calculations (How much it shifted that day)
     let total = 0; // for calculations and printed data (3rd chart)
@@ -115,10 +126,13 @@ function dataParser (response){
                     dayShifted.push(change)
                     total += Math.abs(change)
                     profitableDays += 1
+                    dailyProfitsArr.push('green')
                 } else {
                     dayShifted.push(change)
                     total -= change
                     lossesDays += 1
+                    dailyProfitsArr.push('red')
+
                 }
             } else { // partial gap up
                 gapupDays += 1;
@@ -126,16 +140,20 @@ function dataParser (response){
                     dayShifted.push(change)
                     total += change
                     profitableDays += 1
+                    dailyProfitsArr.push('green')
+
                 } else {
                     dayShifted.push(change)
                     total -= change
                     lossesDays += 1
+                    dailyProfitsArr.push('red')
+
                 }
             }
         }
     };
-    createCharts(abbreviatedDays, gap, tooltipsDays, canvas, 'Gap Open');
-    createCharts(abbreviatedDays, dayShifted, tooltipsDays, profitsCanvas, 'Daily Profits');
+    createCharts(abbreviatedDays, gap, gapBarColor(gap), tooltipsDays, canvas, 'Gap Open');
+    createCharts(abbreviatedDays, dayShifted, profitsBarColor(dailyProfitsArr), tooltipsDays, profitsCanvas, 'Daily Profits');
     document.getElementById('gapupDays').textContent = `~ ${gapupDays}` 
     document.getElementById('gapupDays-percent').textContent = `%${Math.round((gapupDays / gap.length) * 100)}` 
     document.getElementById('gapdownDays').textContent = `~ ${gapdownDays}` 
@@ -156,12 +174,9 @@ function dataParser (response){
         marketPriceEndYear = response.prices[1].close
     }
     document.getElementById('total-percent').textContent = `~ %${(total / marketPriceBeginningYear)}`;
-    console.log(total)
-    console.log(marketPriceBeginningYear)
-    console.log((total / marketPriceBeginningYear) * 100)
     document.getElementById('market').textContent = `~ $${Math.floor((marketPriceEndYear - marketPriceBeginningYear) * 100) / 100}`
     document.getElementById('market-percent').textContent = `~ %${Math.round(((marketPriceEndYear - marketPriceBeginningYear) ) * 100)}`
-
+    console.log(dailyProfitsArr)
 }
 
 
@@ -187,13 +202,13 @@ document.getElementById("submitStockType").addEventListener('click', (event) => 
     // star.className = "fa-duotone fa-star hover"
     historyTag.textContent =  searchForStock
     document.getElementById('list').append(historyTag) //star
-    document.getElementsByClassName('fa-duotone')[0].addEventListener('click', (e) => {
-        if (e.target.style.color !== "yellow"){
-            e.target.style.color = "yellow";
-        } else{
-            e.target.style.color = "gray";
-        }
-    })
+    // document.getElementsByClassName('fa-duotone')[0].addEventListener('click', (e) => {
+    //     if (e.target.style.color !== "yellow"){
+    //         e.target.style.color = "yellow";
+    //     } else{
+    //         e.target.style.color = "gray";
+    //     }
+    // })
     document.getElementById('data-text').hidden = false
     fetchFunc(searchForStock, dataParser)
 

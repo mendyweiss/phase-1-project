@@ -142,6 +142,7 @@ li:hover {
     width: 33%; 
     float: left;
     display: inline;
+    padding: 50px;
 }
 #trading-data {
     border-left-style: solid;
@@ -149,6 +150,7 @@ li:hover {
     width: 34%;
     float: left;
     display: inline;
+    padding: 50px;
     
 
 }
@@ -158,4 +160,5 @@ li:hover {
     width: 33%;
     float: right;
     display: inline;
+    padding: 50px;
 }
