@@ -48,6 +48,7 @@ body {
     padding: 8px;
     float: right;
     right: 10%;
+    cursor: pointer;
 }
 #how-to-div {
     border: #111;
@@ -56,10 +57,11 @@ body {
     padding: 8px;
     float: left;
     left: 10%;
+    cursor: pointer;
 }
 
 span :hover {
-    border: rgb(254, 254, 112);
+    border-color: rgb(254, 254, 112);
 }
 button :hover {
     color: rgba(128, 128, 128, 0.8);

@@ -18,7 +18,7 @@ function fetchFunc (stock, func) {
         .then(response => func(response))
         .catch(err => console.error(err));
 }
-
+//functions to fill the bar colors
 function gapBarColor (data) {
     return data.map((element) => {
          if (element > 0) {
@@ -199,8 +199,7 @@ document.getElementById("submitStockType").addEventListener('click', (event) => 
     const searchForStock = document.getElementById('choices').value
 
     const historyTag = document.createElement('li')
-    // const star = document.createElement('i')
-    // star.className = "fa-duotone fa-star hover"
+    historyTag.innerHTML += '<i class="fa-solid fa-star></i>'
     historyTag.textContent =  searchForStock
     document.getElementById('list').append(historyTag) //star
     // document.getElementsByClassName('fa-duotone')[0].addEventListener('click', (e) => {
