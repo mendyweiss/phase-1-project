@@ -64,8 +64,8 @@ function gapBarColor (data) {
                 yAlign: 'bottom',
                 displayColors: false,
                 callbacks: {
-                    title: function (tooltips, index) {
-                        return tooltips[index]
+                    title: (tooltips) => {
+                        console.log(tooltips)
                     }
                 },
                 label: tooltips
@@ -173,10 +173,11 @@ function dataParser (response){
     if (!marketPriceEndYear){
         marketPriceEndYear = response.prices[1].close
     }
-    document.getElementById('total-percent').textContent = `~ %${(total / marketPriceBeginningYear)}`;
-    document.getElementById('market').textContent = `~ $${Math.floor((marketPriceEndYear - marketPriceBeginningYear) * 100) / 100}`
-    document.getElementById('market-percent').textContent = `~ %${Math.round(((marketPriceEndYear - marketPriceBeginningYear) ) * 100)}`
-    console.log(dailyProfitsArr)
+
+    document.getElementById('total-percent').textContent = `~ %${Math.round(((total - marketPriceBeginningYear) / marketPriceBeginningYear) * 100)}`;
+    
+    document.getElementById('market').textContent = `~ $${Math.round((marketPriceEndYear - marketPriceBeginningYear))}`
+    document.getElementById('market-percent').textContent = `~ %${Math.round(((marketPriceEndYear - marketPriceBeginningYear) / marketPriceBeginningYear ) * 100)}`
 }
 
 
